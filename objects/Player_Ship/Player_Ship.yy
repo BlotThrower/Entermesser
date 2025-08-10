@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"Sheep",
+  "%Name":"Player_Ship",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Sheep",
+  "name":"Player_Ship",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite2",
-    "path":"sprites/Sprite2/Sprite2.yy",
+    "name":"Player_Ship_Test_Sprite",
+    "path":"sprites/Player_Ship_Test_Sprite/Player_Ship_Test_Sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
