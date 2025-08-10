@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"Wha",
+  "%Name":"Entermesser",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -33,7 +33,7 @@
   "MetaData":{
     "IDEVersion":"2024.13.1.193",
   },
-  "name":"Wha",
+  "name":"Entermesser",
   "resources":[
     {"id":{"name":"Game_Settings","path":"objects/Game_Settings/Game_Settings.yy",},},
     {"id":{"name":"Player_Bullet","path":"objects/Player_Bullet/Player_Bullet.yy",},},
