@@ -1,6 +1,6 @@
 {
   "$GMProject":"v1",
-  "%Name":"Wha",
+  "%Name":"Entermesser",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -33,11 +33,17 @@
   "MetaData":{
     "IDEVersion":"2024.13.1.193",
   },
-  "name":"Wha",
+  "name":"Entermesser",
   "resources":[
+    {"id":{"name":"Game_Settings","path":"objects/Game_Settings/Game_Settings.yy",},},
+    {"id":{"name":"Player_Bullet","path":"objects/Player_Bullet/Player_Bullet.yy",},},
+    {"id":{"name":"Player_Main_Bullet_Focused","path":"objects/Player_Main_Bullet_Focused/Player_Main_Bullet_Focused.yy",},},
+    {"id":{"name":"Player_Main_Bullet_Normal","path":"objects/Player_Main_Bullet_Normal/Player_Main_Bullet_Normal.yy",},},
     {"id":{"name":"Sheep_Option","path":"objects/Sheep_Option/Sheep_Option.yy",},},
     {"id":{"name":"Sheep","path":"objects/Sheep/Sheep.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
+    {"id":{"name":"Player_Main_Bullet_Focused_Sprite","path":"sprites/Player_Main_Bullet_Focused_Sprite/Player_Main_Bullet_Focused_Sprite.yy",},},
+    {"id":{"name":"Player_Main_Bullet","path":"sprites/Player_Main_Bullet/Player_Main_Bullet.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
@@ -45,7 +51,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
