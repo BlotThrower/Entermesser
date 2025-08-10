@@ -1,5 +1,9 @@
 var active_speed = keyboard_check(vk_control) ? speed_focused : speed_normal;
 
+if keyboard_check_pressed(vk_control) || keyboard_check_released(vk_control){
+	timer_mode_change = mode_change_sequence;
+}
+
 if keyboard_check(vk_left) && keyboard_check(vk_up){
 	x = x - active_speed / sqrt(2);
 	y = y - active_speed / sqrt(2);
@@ -32,13 +36,31 @@ else if keyboard_check(vk_down){
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
-if fire_timer > 0 {
-	fire_timer -= delta_time / 1000000;
+if fire_timer_normal > 0 {
+	fire_timer_normal -= delta_time / 1000000;
 }
 
-if keyboard_check(vk_space) && fire_timer <= 0 {
-	instance_create_layer(x - 12, y - 18, "Instances", Player_Main_Bullet_Normal)
-	instance_create_layer(x + 12, y - 18, "Instances", Player_Main_Bullet_Normal)
-	
-	fire_timer = fire_rate;
+if fire_timer_focused > 0 {
+	fire_timer_focused -= delta_time / 1000000;
+}
+
+if timer_mode_change > 0 {
+	timer_mode_change -= delta_time / 1000000;
+}
+
+if keyboard_check(vk_space) && timer_mode_change <= 0 {
+	shot(active_speed)
+}
+
+
+function shot(active_speed){
+	if active_speed == speed_normal && fire_timer_normal <= 0{
+		instance_create_layer(x - 12, y - 18, "Instances", Player_Main_Bullet_Normal)
+		instance_create_layer(x + 12, y - 18, "Instances", Player_Main_Bullet_Normal)
+		fire_timer_normal = fire_rate_normal;
+	}
+	else if active_speed == speed_focused && fire_timer_focused <= 0{
+		instance_create_layer(x, y - 18, "Instances", Player_Main_Bullet_Focused)
+		fire_timer_focused = fire_rate_focused;
+	}
 }
