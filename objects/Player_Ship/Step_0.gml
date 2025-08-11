@@ -62,6 +62,14 @@ function shot(active_speed){
 	if active_speed == speed_normal && fire_timer_normal <= 0{
 		instance_create_layer(x - 12, y - 2, "Instances", Player_Main_Bullet_Normal)
 		instance_create_layer(x + 12, y - 2, "Instances", Player_Main_Bullet_Normal)
+		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Normal);
+		with(opt_shot_left){
+			direction = 95;
+		}
+		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Normal);
+		with(opt_shot_right){
+			direction = 85;
+		}
 		fire_timer_normal = fire_rate_normal;
 	}
 	else if active_speed == speed_focused && fire_timer_focused <= 0{
