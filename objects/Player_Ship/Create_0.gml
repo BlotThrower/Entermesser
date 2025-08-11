@@ -6,3 +6,5 @@ timer_mode_change = 0;
 mode_change_sequence = 0.05;
 speed_normal = 5;
 speed_focused = 3;
+active_speed = 0;
+alive = true;

@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"Enemy_Bullet_Targeted_Normal",
+  "%Name":"Enemy_Air",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Player_Ship","path":"objects/Player_Ship/Player_Ship.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Enemy_Bullet_Targeted_Normal",
+  "name":"Enemy_Air",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy_Bullets",
-    "path":"folders/Objects/Enemy_Bullets.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"Enemy_Bullet_Targeted",
-    "path":"objects/Enemy_Bullet_Targeted/Enemy_Bullet_Targeted.yy",
+    "name":"Enemy",
+    "path":"objects/Enemy/Enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Enemy_Bullet_Test",
-    "path":"sprites/Enemy_Bullet_Test/Enemy_Bullet_Test.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

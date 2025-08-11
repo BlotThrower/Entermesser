@@ -1,10 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"Enemy_Air_Popcorn_Normal",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Player_Bullet","path":"objects/Player_Bullet/Player_Bullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"Enemy_Air_Popcorn_Normal",
   "overriddenProperties":[],
@@ -13,8 +10,8 @@
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"Enemy_Air_Popcorn",
-    "path":"objects/Enemy_Air_Popcorn/Enemy_Air_Popcorn.yy",
+    "name":"Enemy_Air",
+    "path":"objects/Enemy_Air/Enemy_Air.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
