@@ -8,3 +8,6 @@ speed_normal = 5;
 speed_focused = 3;
 active_speed = 0;
 alive = true;
+
+instance_create_layer(x - 5, y + 5, "Instances", Player_Option_Left);
+instance_create_layer(x + 5, y + 5, "Instances", Player_Option_Right);
