@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"Player_Main_Bullet_Normal",
+  "%Name":"Player_Option_Bullet_Normal",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Player_Main_Bullet_Normal",
+  "name":"Player_Option_Bullet_Normal",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Player_Main_Bullet",
-    "path":"sprites/Player_Main_Bullet/Player_Main_Bullet.yy",
+    "name":"Player_Option_Bullet_Sprite",
+    "path":"sprites/Player_Option_Bullet_Sprite/Player_Option_Bullet_Sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

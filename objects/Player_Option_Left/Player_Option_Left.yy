@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"Player_Main_Bullet_Normal",
+  "%Name":"Player_Option_Left",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Player_Main_Bullet_Normal",
+  "name":"Player_Option_Left",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"Player_Bullet",
-    "path":"objects/Player_Bullet/Player_Bullet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Player_Main_Bullet",
-    "path":"sprites/Player_Main_Bullet/Player_Main_Bullet.yy",
+    "name":"Player_Option_Test_Sprite",
+    "path":"sprites/Player_Option_Test_Sprite/Player_Option_Test_Sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
