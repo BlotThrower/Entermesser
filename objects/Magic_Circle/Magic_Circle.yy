@@ -8,8 +8,8 @@
   "name":"Magic_Circle",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Player_Projectiles",
+    "path":"folders/Objects/Player_Projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

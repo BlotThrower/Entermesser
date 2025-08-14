@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"Player_Option_Bullet_Normal",
+  "%Name":"Player_Magic_Hook",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Player_Ship","path":"objects/Player_Ship/Player_Ship.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Player_Option_Bullet_Normal",
+  "name":"Player_Magic_Hook",
   "overriddenProperties":[],
   "parent":{
     "name":"Player_Projectiles",
     "path":"folders/Objects/Player_Projectiles.yy",
   },
-  "parentObjectId":{
-    "name":"Player_Bullet",
-    "path":"objects/Player_Bullet/Player_Bullet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Player_Option_Bullet_Sprite",
-    "path":"sprites/Player_Option_Bullet_Sprite/Player_Option_Bullet_Sprite.yy",
+    "name":"Player_Main_Bullet_Focused_Sprite",
+    "path":"sprites/Player_Main_Bullet_Focused_Sprite/Player_Main_Bullet_Focused_Sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

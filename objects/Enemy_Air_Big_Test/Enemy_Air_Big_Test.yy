@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"Player_Main_Bullet_Focused",
+  "%Name":"Enemy_Air_Big_Test",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Player_Main_Bullet_Focused",
+  "name":"Enemy_Air_Big_Test",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Enemy",
+    "path":"folders/Objects/Enemy.yy",
   },
   "parentObjectId":{
-    "name":"Player_Bullet",
-    "path":"objects/Player_Bullet/Player_Bullet.yy",
+    "name":"Enemy_Air",
+    "path":"objects/Enemy_Air/Enemy_Air.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Player_Main_Bullet_Focused_Sprite",
-    "path":"sprites/Player_Main_Bullet_Focused_Sprite/Player_Main_Bullet_Focused_Sprite.yy",
+    "name":"Enemy_Air_Big_Test_Sprite",
+    "path":"sprites/Enemy_Air_Big_Test_Sprite/Enemy_Air_Big_Test_Sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,
