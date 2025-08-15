@@ -42,6 +42,7 @@
     {"id":{"name":"Enemy_Air_Popcorn_Normal","path":"objects/Enemy_Air_Popcorn_Normal/Enemy_Air_Popcorn_Normal.yy",},},
     {"id":{"name":"Enemy_Air","path":"objects/Enemy_Air/Enemy_Air.yy",},},
     {"id":{"name":"Enemy_Bullet_Normal","path":"objects/Enemy_Bullet_Normal/Enemy_Bullet_Normal.yy",},},
+    {"id":{"name":"Enemy_Bullet_Slowable","path":"objects/Enemy_Bullet_Slowable/Enemy_Bullet_Slowable.yy",},},
     {"id":{"name":"Enemy_Bullet","path":"objects/Enemy_Bullet/Enemy_Bullet.yy",},},
     {"id":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},},
     {"id":{"name":"Game_Settings","path":"objects/Game_Settings/Game_Settings.yy",},},

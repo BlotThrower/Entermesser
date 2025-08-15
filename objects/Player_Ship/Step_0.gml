@@ -63,15 +63,10 @@ if timer_mode_change > 0 {
 }
 
 if keyboard_check(vk_space) && timer_mode_change <= 0 {
-	if (magic_attack_active && magic_attack_current.Hooked == true){
-		magic_shot(active_speed);
-	}
-	else{
 		shot(active_speed)
-	}
 }
 
-var key_magic_attack_pressed = keyboard_check_pressed(vk_alt);
+var key_magic_attack_pressed = keyboard_check_pressed(ord("A"));
 
 var key_magic_attack_double = false;
 if key_magic_attack_pressed {
@@ -87,7 +82,7 @@ if key_magic_attack_pressed{
 		magic_attack_active = false;
 	}
 	else{
-		magic_attack(current_direction);	
+		magic_attack();	
 	}
 }
 
@@ -120,24 +115,34 @@ function shot(active_speed){
 	}
 }
 
-function magic_shot(active_speed){
-	if active_speed == speed_normal && fire_timer_normal <= 0{
-		instance_create_layer(x, y - 2, "Instances", Player_Main_Bullet_Normal)
-		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Magic);
-		var magx = magic_attack_current.x;
-		var magy = magic_attack_current.y;
-		with(opt_shot_left){
-			direction = point_direction(x, y, magx, magy);
-		}
-		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Magic);
-		with(opt_shot_right){
-			direction = point_direction(x, y, magx, magy);
-		}
-		fire_timer_normal = fire_rate_normal;
+//function magic_shot(active_speed){
+//	if active_speed == speed_normal && fire_timer_normal <= 0{
+//		instance_create_layer(x, y - 2, "Instances", Player_Main_Bullet_Normal)
+//		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Magic);
+//		var magx = magic_attack_current.x;
+//		var magy = magic_attack_current.y;
+//		with(opt_shot_left){
+//			direction = point_direction(x, y, magx, magy);
+//		}
+//		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Magic);
+//		with(opt_shot_right){
+//			direction = point_direction(x, y, magx, magy);
+//		}
+//		fire_timer_normal = fire_rate_normal;
+//	}
+//}
+
+function magic_attack(){
+	switch (magic_attack_active){
+		case false:
+		magic_attack_current = instance_create_layer(Player_Ship.x, Player_Ship.y, "Instances", Magic_Circle);
+		magic_attack_active = true;
+		case true:
+			return;
 	}
 }
 
-function magic_attack(current_direction){
+function magic_attack2(current_direction){
 	switch (magic_attack_active){
 		case false:
 		magic_attack_current = instance_create_layer(Player_Ship.x, Player_Ship.y, "Instances", Player_Magic_Hook);
