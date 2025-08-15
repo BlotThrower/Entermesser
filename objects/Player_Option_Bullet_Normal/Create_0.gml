@@ -1,3 +1,3 @@
 // Inherit the parent event
 event_inherited();
-bullet_dmg = 5;
+bullet_dmg = 2;

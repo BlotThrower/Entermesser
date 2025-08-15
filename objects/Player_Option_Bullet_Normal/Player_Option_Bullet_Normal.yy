@@ -8,8 +8,8 @@
   "name":"Player_Option_Bullet_Normal",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Player_Projectiles",
+    "path":"folders/Objects/Player_Projectiles.yy",
   },
   "parentObjectId":{
     "name":"Player_Bullet",
