@@ -4,5 +4,9 @@ if(in_sequence){
 	return;
 }
 
+if (Player_Ship.magic_attack_active){
+	return;
+}
+
 x = Player_Ship.x - 35;	
 y = Player_Ship.y + 25;

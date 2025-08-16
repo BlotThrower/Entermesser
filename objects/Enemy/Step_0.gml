@@ -28,3 +28,18 @@ function Enem_Shoot(Shoot_Type, Bullet_Type, bullet_speed, offset_x = 0, offset_
 		}
 	}
 }
+
+if Can_Berserk && Berserk_Check(){
+	Enter_Berserk();
+}
+
+function Berserk_Check(){
+	if HP == 0 && Mana_Load > 0 {
+		return true;
+	}
+	return false;
+}
+
+function Enter_Berserk(){
+		
+}

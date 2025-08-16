@@ -13,8 +13,8 @@
     "path":"folders/Objects/Enemy_Bullets.yy",
   },
   "parentObjectId":{
-    "name":"Enemy_Bullet",
-    "path":"objects/Enemy_Bullet/Enemy_Bullet.yy",
+    "name":"Enemy_Bullet_Slowable",
+    "path":"objects/Enemy_Bullet_Slowable/Enemy_Bullet_Slowable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
