@@ -60,6 +60,7 @@
     {"id":{"name":"Option_Startup_Left","path":"sequences/Option_Startup_Left/Option_Startup_Left.yy",},},
     {"id":{"name":"Option_Startup_Right","path":"sequences/Option_Startup_Right/Option_Startup_Right.yy",},},
     {"id":{"name":"Enemy_Air_Big_Test_Sprite","path":"sprites/Enemy_Air_Big_Test_Sprite/Enemy_Air_Big_Test_Sprite.yy",},},
+    {"id":{"name":"Enemy_Bullet_Test_Slowed","path":"sprites/Enemy_Bullet_Test_Slowed/Enemy_Bullet_Test_Slowed.yy",},},
     {"id":{"name":"Enemy_Bullet_Test","path":"sprites/Enemy_Bullet_Test/Enemy_Bullet_Test.yy",},},
     {"id":{"name":"Enemy_Popcorn_Test_Sprite","path":"sprites/Enemy_Popcorn_Test_Sprite/Enemy_Popcorn_Test_Sprite.yy",},},
     {"id":{"name":"Magic_Circle_Sprite","path":"sprites/Magic_Circle_Sprite/Magic_Circle_Sprite.yy",},},
