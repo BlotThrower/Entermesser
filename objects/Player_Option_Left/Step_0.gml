@@ -5,8 +5,6 @@ if(in_sequence){
 }
 
 if (Player_Ship.magic_attack_active){
-	x = Magic_Circle.x - 45;
-	y = Magic_Circle.y;
 	return;
 }
 
