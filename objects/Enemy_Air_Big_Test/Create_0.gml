@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
-HP = 600;
+HP_Max = 600;
+HP = HP_Max;
 Mana_Load = 700;
 Points = 100;
 shoot_type = Shoot_Type.target_rough;
