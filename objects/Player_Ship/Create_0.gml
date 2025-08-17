@@ -16,3 +16,24 @@ enum plr_direction {neutral, up, down, left, right, up_left, up_right, down_left
 
 instance_create_layer(x - 5, y + 5, "Instances", Player_Option_Left);
 instance_create_layer(x + 5, y + 5, "Instances", Player_Option_Right);
+
+function Player_Death(){
+	alive = false;
+	visible = false;
+	var opleft = instance_find(Player_Option_Left, 0);
+	opleft.visible = false;
+	var opright = instance_find(Player_Option_Right, 0);
+	opright.visible = false;
+	if (magic_attack_active != false) {
+		magic_attack_active = false;
+		instance_destroy(magic_attack_current); 
+	}
+	Game_Obj.Lives -= 1;
+	if (Game_Obj.Lives >= 0) {
+		Player_Respawn();
+	}
+}
+
+function Player_Respawn() {
+	alarm[1] = 40;
+}
