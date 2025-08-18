@@ -39,6 +39,7 @@
   },
   "name":"Entermesser",
   "resources":[
+    {"id":{"name":"CameraObj","path":"objects/CameraObj/CameraObj.yy",},},
     {"id":{"name":"Enemy_Air_Big_Test","path":"objects/Enemy_Air_Big_Test/Enemy_Air_Big_Test.yy",},},
     {"id":{"name":"Enemy_Air_Popcorn_Normal","path":"objects/Enemy_Air_Popcorn_Normal/Enemy_Air_Popcorn_Normal.yy",},},
     {"id":{"name":"Enemy_Air","path":"objects/Enemy_Air/Enemy_Air.yy",},},
