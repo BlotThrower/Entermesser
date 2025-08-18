@@ -1,11 +1,14 @@
+var shot_held = keyboard_check(vk_space);
+var key_magic_attack_pressed = keyboard_check_pressed(ord("A"));
+var key_magic_attack_held = keyboard_check(ord("A"));
+var current_direction = plr_direction.up;
+active_speed = keyboard_check(ord("S")) ? speed_focused : speed_normal;
+
 if alive == false{
 	visible = false;
 	active_speed = 0;
 	return;
 }
-
-var current_direction = plr_direction.up;
-active_speed = keyboard_check(vk_control) ? speed_focused : speed_normal;
 
 if keyboard_check_pressed(vk_control) || keyboard_check_released(vk_control){
 	timer_mode_change = mode_change_sequence;
@@ -66,13 +69,10 @@ if timer_mode_change > 0 {
 	timer_mode_change -= delta_time / 1000000;
 }
 
-if keyboard_check(vk_space) && timer_mode_change <= 0 {
-		main_shot();
-		option_shot();
+if shot_held && timer_mode_change <= 0 {
+	main_shot();
+	option_shot();
 }
-
-var key_magic_attack_pressed = keyboard_check_pressed(ord("A"));
-var key_magic_attack_held = keyboard_check(ord("A"));
 
 var key_magic_attack_double = false;
 if key_magic_attack_pressed {

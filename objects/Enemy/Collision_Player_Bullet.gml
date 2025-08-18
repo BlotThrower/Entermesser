@@ -1,5 +1,5 @@
 var dmg = other.bullet_dmg;
-if (Flash <= 0 ) Flash = 5;
+if (Flash <= 0 ) Flash = 3;
 
 HP = HP - dmg;
 instance_destroy(other);
