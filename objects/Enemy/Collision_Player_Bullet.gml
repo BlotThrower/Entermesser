@@ -1,4 +1,5 @@
 var dmg = other.bullet_dmg;
+if (Flash <= 0 ) Flash = 3;
 
 HP = HP - dmg;
 instance_destroy(other);
@@ -14,6 +15,6 @@ function Death(){
 
 function Token_Spawn(){
 	for (var i = 0; i < array_length(Tokens); i++){
-		instance_create_layer(x,y,"Instances", Tokens[i]);
+		instance_create_layer(x,y,"Tokens", Tokens[i]);
 	}
 }

@@ -1,2 +1,2 @@
 event_inherited();
-bullet_dmg = 10;
+bullet_dmg = 5;

@@ -1,11 +1,14 @@
+var shot_held = keyboard_check(vk_space);
+var key_magic_attack_pressed = keyboard_check_pressed(ord("A"));
+var key_magic_attack_held = keyboard_check(ord("A"));
+var current_direction = plr_direction.up;
+active_speed = keyboard_check(ord("S")) ? speed_focused : speed_normal;
+
 if alive == false{
 	visible = false;
 	active_speed = 0;
 	return;
 }
-
-var current_direction = plr_direction.up;
-active_speed = keyboard_check(vk_control) ? speed_focused : speed_normal;
 
 if keyboard_check_pressed(vk_control) || keyboard_check_released(vk_control){
 	timer_mode_change = mode_change_sequence;
@@ -66,13 +69,10 @@ if timer_mode_change > 0 {
 	timer_mode_change -= delta_time / 1000000;
 }
 
-if keyboard_check(vk_space) && timer_mode_change <= 0 {
-		main_shot();
-		option_shot();
+if shot_held && timer_mode_change <= 0 {
+	main_shot();
+	option_shot();
 }
-
-var key_magic_attack_pressed = keyboard_check_pressed(ord("A"));
-var key_magic_attack_held = keyboard_check(ord("A"));
 
 var key_magic_attack_double = false;
 if key_magic_attack_pressed {
@@ -103,27 +103,27 @@ if key_magic_attack_pressed{
 function main_shot(){
 	if magic_attack_active {
 		if fire_timer_normal <= 0 {
-		instance_create_layer(x, y - 2, "Instances", Player_Main_Bullet_Normal);
+		instance_create_layer(x, y - 2, "Bullets", Player_Main_Bullet_Normal);
 		}
 	}
 	else if active_speed == speed_normal && fire_timer_normal <= 0{
-		instance_create_layer(x - 12, y - 2, "Instances", Player_Main_Bullet_Normal)
-		instance_create_layer(x + 12, y - 2, "Instances", Player_Main_Bullet_Normal)
+		instance_create_layer(x - 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
+		instance_create_layer(x + 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
 	}
 	else if active_speed == speed_focused && fire_timer_focused <= 0{
-		instance_create_layer(x - 12, y - 2, "Instances", Player_Main_Bullet_Normal)
-		instance_create_layer(x + 12, y - 2, "Instances", Player_Main_Bullet_Normal)
+		instance_create_layer(x - 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
+		instance_create_layer(x + 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
 	}
 }
 
 function option_shot(){
 	if magic_attack_active {
 		if fire_timer_normal <= 0 {
-		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Magic);
+		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Bullets", Player_Option_Bullet_Magic);
 		with(opt_shot_left){
 			direction = 90;
 		}
-		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Magic);
+		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Bullets", Player_Option_Bullet_Magic);
 		with(opt_shot_right){
 			direction = 90;
 		}
@@ -131,54 +131,35 @@ function option_shot(){
 		}
 	}
 	else if active_speed == speed_normal && fire_timer_normal <= 0{
-		instance_create_layer(x - 12, y - 2, "Instances", Player_Main_Bullet_Normal)
-		instance_create_layer(x + 12, y - 2, "Instances", Player_Main_Bullet_Normal)
-		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Normal);
-		with(opt_shot_left){
+		instance_create_layer(x - 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
+		instance_create_layer(x + 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
+		with(instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Bullets", Player_Option_Bullet_Normal)){
 			direction = 92.5;
+			image_angle = direction - 90;
 		}
-		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Normal);
-		with(opt_shot_right){
+		with(instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Bullets", Player_Option_Bullet_Normal)){
 			direction = 87.5;
+			image_angle = direction - 90;
 		}
 		fire_timer_normal = fire_rate_normal;
 	}
 	else if active_speed == speed_focused && fire_timer_focused <= 0{
-		instance_create_layer(x - 12, y - 2, "Instances", Player_Main_Bullet_Normal)
-		instance_create_layer(x + 12, y - 2, "Instances", Player_Main_Bullet_Normal)
-		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Normal);
-		with(opt_shot_left){
+		instance_create_layer(x - 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
+		instance_create_layer(x + 12, y - 2, "Bullets", Player_Main_Bullet_Normal)
+		with(instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Bullets", Player_Option_Bullet_Normal)){
 			direction = 90;
 		}
-		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Normal);
-		with(opt_shot_right){
+		with(instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Bullets", Player_Option_Bullet_Normal)){
 			direction = 90;
 		}
 		fire_timer_focused = fire_rate_focused;
 	}
 }
 
-//function magic_shot(active_speed){
-//	if active_speed == speed_normal && fire_timer_normal <= 0{
-//		instance_create_layer(x, y - 2, "Instances", Player_Main_Bullet_Normal)
-//		var opt_shot_left = instance_create_layer(Player_Option_Left.x, Player_Option_Left.y, "Instances", Player_Option_Bullet_Magic);
-//		var magx = magic_attack_current.x;
-//		var magy = magic_attack_current.y;
-//		with(opt_shot_left){
-//			direction = point_direction(x, y, magx, magy);
-//		}
-//		var opt_shot_right = instance_create_layer(Player_Option_Right.x, Player_Option_Right.y, "Instances", Player_Option_Bullet_Magic);
-//		with(opt_shot_right){
-//			direction = point_direction(x, y, magx, magy);
-//		}
-//		fire_timer_normal = fire_rate_normal;
-//	}
-//}
-
 function magic_attack(){
 	switch (magic_attack_active){
 		case false:
-		magic_attack_current = instance_create_layer(Player_Ship.x, Player_Ship.y, "Instances", Magic_Circle);
+		magic_attack_current = instance_create_layer(Player_Ship.x, Player_Ship.y, "Bullets", Magic_Circle);
 		magic_attack_active = true;
 		case true:
 			return;
@@ -188,7 +169,7 @@ function magic_attack(){
 function magic_attack2(current_direction){
 	switch (magic_attack_active){
 		case false:
-		magic_attack_current = instance_create_layer(Player_Ship.x, Player_Ship.y, "Instances", Player_Magic_Hook);
+		magic_attack_current = instance_create_layer(Player_Ship.x, Player_Ship.y, "Bullets", Player_Magic_Hook);
 		magic_attack_active = true;
 		case true:
 			return;
